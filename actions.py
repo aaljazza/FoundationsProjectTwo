@@ -68,7 +68,7 @@ def pick_products(cart, picked_store):
             for product in picked_store.products:
                 if InputProd == product.name.lower():
                     print ("%s has been added to your cart. Feel free to add more or type 'checkout' to leave." % InputProd)
-                    cart.add_to_cart(InputProd)
+                    cart.add_to_cart(product)
                     checkval3 = 1
                 elif InputProd == "checkout":
                     checkval2 = InputProd
@@ -110,8 +110,7 @@ def shop():
     if cart.products == [] and UserExitOption == "yes":
         print ("Your Cart is Empty.")
     elif UserExitOption == "yes":
-        cart.get_total_price()
-        cart.print_receipt()
+        cart.checkout()
         
 
 def thank_you():

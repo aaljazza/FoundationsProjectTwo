@@ -81,6 +81,7 @@ class Cart():
         Does the checkout.
         """
         # your code goes here!
+        self.print_receipt()
         confirmation = input("Please confirm your order with 'Yes' or 'No' to Cancel").lower()
         if confirmation == "yes":
             print ("Your order has been placed.")
